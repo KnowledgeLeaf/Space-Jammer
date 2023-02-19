@@ -1,0 +1,39 @@
+~Enemies
+{
+    Shooting
+    Looking at/Chasing player
+    Enemy shooting sounds
+    Different types of Enemies
+}
+
+~Player Mechanics
+{
+    Thruster speed boost time limit w/indicator
+    Skill levels/trees?
+    Map
+    Emergency Stoping (movement)
+}
+
+~Environment
+{
+    Expansive universe(possibly procedural generating if desired)
+}
+
+~Audio
+{
+    Sound FX on player block
+}
+
+~Misc
+{
+    Credits
+    Saving (Saves player position, currency, upgrades, etc)
+    Headsup display w/message boxes
+    Off Screen Navigation
+    Main Menu
+    Rework name unput UI
+    Rework Score Screen
+}
+
+**Necessary things for ASSIGNMENT Final Labeled with "**"
+!!Things in progress Labeled with "!!"
