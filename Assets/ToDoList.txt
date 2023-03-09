@@ -10,30 +10,33 @@
 {
     Thruster speed boost time limit w/indicator
     Skill levels/trees?
-    Map
     Emergency Stoping (movement)
+    Multiple weapons
 }
-
 ~Environment
 {
-    Expansive universe(possibly procedural generating if desired)
+    !!Expansive universe(possibly procedural generating if desired)!!
+    {
+        !!Setup Obstacle Spawner so that it adds all spawned objects to the visibility manager for being turned on and off by distance!!
+        Have randomly spawning stations
+        Probably start using pooling for various obstacles and stations to ensure performance
+        Off Screen Navigation
+        Map
+    }
 }
-
 ~Audio
 {
     Sound FX on player block
 }
-
 ~Misc
 {
     Credits
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
-    Off Screen Navigation
     Main Menu
-    Rework name unput UI
+    Rework name input UI
     Rework Score Screen
 }
 
-**Necessary things for ASSIGNMENT Final Labeled with "**"
+**Necessary things for next itteration Labeled with "**"
 !!Things in progress Labeled with "!!"

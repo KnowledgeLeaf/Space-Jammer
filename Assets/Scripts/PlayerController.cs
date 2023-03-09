@@ -127,7 +127,6 @@ public class PlayerController : MonoBehaviour
                 m_rigidbody.velocity = m_rigidbody.velocity.normalized * (maxSpeed / 2);
            }
         }
-        Debug.Log(m_rigidbody.velocity.magnitude);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
