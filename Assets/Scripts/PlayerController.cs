@@ -82,8 +82,8 @@ public class PlayerController : MonoBehaviour
                 m_shotTimer -= Time.deltaTime;
             }
         }
-         if(Input.GetKeyDown(KeyCode.E))
-         {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
             if(Time.timeScale != 0f)
             {
                 if(m_inventoryOpen == false)
@@ -97,7 +97,11 @@ public class PlayerController : MonoBehaviour
                     m_inventoryOpen = false;
                 }
             }
-         }
+        }
+        if(Input.GetKey(KeyCode.C))
+        {
+            m_rigidbody.AddForce(-m_rigidbody.velocity / (m_acceleration * 2));
+        }
     }
     void FixedUpdate() 
     {

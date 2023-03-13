@@ -21,25 +21,13 @@ public class BossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(m_inBossRadius == false)
+        if(Vector3.Distance(transform.position, player_Ref.transform.position) < 20)
         {
-            if(Vector3.Distance(transform.position, player_Ref.transform.position) < 20)
-            {
-                backgroundMusicPlayer.GetComponent<AudioSource>().clip = bossMusic;
-                backgroundMusicPlayer.GetComponent<AudioSource>().Play();
-                m_inBossRadius = true;
-            }
+            m_inBossRadius = true;
         }
-        
-
-        if(m_inBossRadius == true)
+        else
         {
-            if(Vector3.Distance(transform.position, player_Ref.transform.position) > 20)
-            {
-                backgroundMusicPlayer.GetComponent<AudioSource>().clip = backgroundMusic;
-                backgroundMusicPlayer.GetComponent<AudioSource>().Play();
-                m_inBossRadius = false;
-            }
+            m_inBossRadius = false;
         }
 
         m_shootCooldown -= 1 * Time.deltaTime;

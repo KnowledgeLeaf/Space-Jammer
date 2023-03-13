@@ -9,10 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(m_bossDead == true)
-        {
-            DisplayHallOfFame();
-        }
+        
     }
 
     public GameObject HOFPanel;

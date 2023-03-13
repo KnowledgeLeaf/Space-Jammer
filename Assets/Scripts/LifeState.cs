@@ -37,7 +37,7 @@ public class LifeState : MonoBehaviour
         if(tag == "Player")
         {
             damageCanvas.SetActive(true);
-            Invoke("DamageOff", 1);
+            Invoke("DamageSplashFade", 1);
         }
 
         if(m_health <= 0)
@@ -55,22 +55,17 @@ public class LifeState : MonoBehaviour
 
             if(gameObject.tag != "Player")
             {
-                if(gameObject.tag == "Boss")
-                {
-                    gm.GetComponent<GameManager>().BossDead = true;
-                }
                 Destroy(gameObject);
             }
             else
             {
                 GetComponent<PlayerController>().PlayerDead = true;
                 gameObject.SetActive(false);
-                gm.DisplayHallOfFame();
             }
         }
     }
 
-    public void DamageOff()
+    public void DamageSplashFade()
     {
         damageCanvas.SetActive(false);
     }

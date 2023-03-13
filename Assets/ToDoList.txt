@@ -8,34 +8,81 @@
 
 ~Player Mechanics
 {
+	Change ship to have module child objects (Modules will change scripts and sprites depending on the upgrade ship has)
+	{
+		Shield
+		Hull
+		Weapons
+		Pickup
+	}
+	
     Thruster speed boost time limit w/indicator
     Skill levels/trees?
-    Emergency Stoping (movement)
-    Multiple weapons
 }
 ~Environment
 {
     !!Expansive universe(possibly procedural generating if desired)!!
     {
-        !!Setup Obstacle Spawner so that it adds all spawned objects to the visibility manager for being turned on and off by distance!!
         Have randomly spawning stations
-        Probably start using pooling for various obstacles and stations to ensure performance
-        Off Screen Navigation
-        Map
+        !!Probably start using pooling for various obstacles and stations to ensure performance!!
     }
 }
 ~Audio
 {
     Sound FX on player block
 }
+~Module ideas
+{
+    "Lance"
+    {
+        Weapon & Shield module
+        3 stage charge the places medium health shields around the player at various charge levels, if broken, charge ends
+        If released without being broken, player dashes forward, and deals damage to anything the shields touch (Maybe invincible shields while dashing?)
+    }
+    "Flame Spitter"
+    {
+        Weapon module
+        Close range high damage continuous stream, shields are down when used
+    }
+    "Launcher"
+    {
+        Weapon module
+        Standard medium range projectile (Basically what's already in the game)
+    }
+    "Plasma Rail"
+    {
+        Weapon module
+        Long range, High damage, Low fire rate (Maybe an electrical varient that does more damage to shields than to health)
+    }
+    "Robo Arm"
+    {
+        Pickup module
+        Grabs one item at a time (but maybe really fast)
+    }
+    "Grav pull"
+    {
+        Pickup module
+        Sucks in all items in a large radius, but slowly (basically what's already in the game)
+    }
+    "Hull Plating L/M/H"
+    {
+        Hull Plating that increases health and decreases speed based on being Light, Medium, or Heavy
+    }
+}
 ~Misc
 {
     Credits
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
+    Off Screen Navigation
+    Map
     Main Menu
-    Rework name input UI
-    Rework Score Screen
+    Gameover menus
+    Multiplayer
+}
+~Bug Fix Board
+{
+    
 }
 
 **Necessary things for next itteration Labeled with "**"
