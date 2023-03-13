@@ -8,12 +8,13 @@
 
 ~Player Mechanics
 {
-	Change ship to have module child objects (Modules will change scripts and sprites depending on the upgrade ship has)
+	!!Change ship to have module child objects (Modules will change scripts and sprites depending on the upgrade ship has)!!
 	{
 		Shield
 		Hull
 		Weapons
 		Pickup
+        Thrusters
 	}
 	
     Thruster speed boost time limit w/indicator
@@ -44,7 +45,7 @@
         Weapon module
         Close range high damage continuous stream, shields are down when used
     }
-    "Launcher"
+    !!"Launcher"!!
     {
         Weapon module
         Standard medium range projectile (Basically what's already in the game)
@@ -59,14 +60,23 @@
         Pickup module
         Grabs one item at a time (but maybe really fast)
     }
-    "Grav pull"
+    !!"Grav pull"!!
     {
         Pickup module
         Sucks in all items in a large radius, but slowly (basically what's already in the game)
     }
     "Hull Plating L/M/H"
     {
+        Hull module
         Hull Plating that increases health and decreases speed based on being Light, Medium, or Heavy
+    }
+    "Cutter Shield"
+    {
+        Shield that takes significantly less damage depending on how well aligned your edge is to the source of damage
+    }
+    !!"Mobility Shield"!!
+    {
+        Strong shield that charges and is active via turning, disables weapons and thrusters while active
     }
 }
 ~Misc
