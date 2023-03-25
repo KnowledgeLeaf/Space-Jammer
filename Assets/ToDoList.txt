@@ -58,10 +58,6 @@
         Save station data for when stations have to despawn for performance
 	}
 }
-~Audio
-{
-    **Sound FX on player block**
-}
 ~Module ideas
 {
     "Lance"
@@ -110,6 +106,7 @@
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
     **Off Screen Navigation**
+    **Main Menu**
     **Gameover menus**
 }
 ~Bug Fix Board
