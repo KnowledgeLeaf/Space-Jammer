@@ -106,12 +106,16 @@
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
     **Off Screen Navigation**
-    **Main Menu**
     **Gameover menus**
 }
 ~Bug Fix Board
 {
-    
+    Sounds to put on AudioManager(Probably audiomanager Creating a gameobject with AudioSource that cleans itself up later), instead of on self:
+    Also be sure to add a cap to the sounds, or something, so we don't blow ears out from having 10 explosion sounds playing at the same time, while realistic, not fun.
+    {
+        Projectile
+        Explosion
+    }
 }
 
 **Necessary things for next itteration Labeled with "**"
