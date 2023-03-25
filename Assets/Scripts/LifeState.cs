@@ -14,7 +14,7 @@ public class LifeState : MonoBehaviour
     [SerializeField] private GameObject explosionSound;
     [SerializeField] private GameObject damageCanvas;
 
-    void Awake()
+    void Start()
     {
         if(tag == "Player")
         {
@@ -23,6 +23,10 @@ public class LifeState : MonoBehaviour
         else if(tag == "Boss")
         {
             m_health = m_DefaultHealth * m_bossHealthMod;
+        }
+        else if (tag == "Destructable")
+        {
+            m_health = m_DefaultHealth * 2;
         }
         else
         {
@@ -55,7 +59,7 @@ public class LifeState : MonoBehaviour
 
             if(gameObject.tag != "Player")
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             else
             {

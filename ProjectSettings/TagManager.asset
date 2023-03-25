@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Destructable
   - Pickup
+  - Enemy
+  - Station
+  - Manager
   - Boss
+  - ShopUI
   layers:
   - Default
   - TransparentFX

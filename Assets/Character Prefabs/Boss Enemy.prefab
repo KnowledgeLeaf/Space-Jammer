@@ -152,7 +152,7 @@ MonoBehaviour:
   bossMusic: {fileID: 8300000, guid: 5b1abf1a0c2c3884f944d8da501a05b0, type: 3}
   backgroundMusic: {fileID: 8300000, guid: bad444257f86d254d9bb5bbc2696b939, type: 3}
   m_inBossRadius: 0
-  projectilePreFab: {fileID: 7251362140891662001, guid: ad24c43a6447ff144883778691043f05, type: 3}
+  projectilePreFab: {fileID: 7251362140891662001, guid: 2035845da6a263c4f958e59e3cd5ff8b, type: 3}
   m_shootCooldown: 0
 --- !u!114 &1092662030860520331
 MonoBehaviour:
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_explosion: {fileID: 3249813007440627433, guid: ff985119906137f4ca4c81464c853fb9, type: 3}
   gm: {fileID: 0}
   explosionSound: {fileID: 4174548261738209049, guid: 97bf7397d9ac04f4abb6dd2f03c77b8e, type: 3}
+  damageCanvas: {fileID: 0}

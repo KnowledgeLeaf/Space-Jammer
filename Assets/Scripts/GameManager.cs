@@ -6,10 +6,19 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private ScoreIndicator theScore;
     private bool m_bossDead = false;
+    [SerializeField] private MainMenu mainMenu;
+
+    private void Start()
+    {
+        mainMenu = GameObject.Find("UI").transform.GetChild(0).gameObject.GetComponent<MainMenu>();
+    }
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            mainMenu.ToggleMainMenu();
+        }
     }
 
     public GameObject HOFPanel;

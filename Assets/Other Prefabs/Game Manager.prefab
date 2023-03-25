@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5122166524124567812}
   - component: {fileID: 5122166524124567811}
-  - component: {fileID: 5735759330290298186}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -45,17 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eec13cce2428ee418bb13f4de672d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theScore: {fileID: 0}
   HOFPanel: {fileID: 0}
---- !u!114 &5735759330290298186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5122166524124567810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c72d499dc452544681c3d865b407c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Obstacles: []
