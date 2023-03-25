@@ -1,8 +1,10 @@
+
+// NOT CURRENTLY IN USE
+//Funny script that doesn't work the way I want but is now a proof of concept I'm proud I made work.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//Funny script that doesn't work the way I want but is now a proof of concept I'm proud I made work.
 
 public class VisibilityManager : MonoBehaviour
 {

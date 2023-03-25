@@ -21,10 +21,9 @@ public class InventoryManager : MonoBehaviour
         Stats[0].text = "Max Health: " + playerLifeRef.DefaultHealth * playerLifeRef.PlayerHealthMod;
         Stats[1].text = "Current Health: " + playerLifeRef.Health;
         Stats[2].text = "Damage: " + playerConRef.Damage;
-        Stats[3].text = "Max Speed: " + playerConRef.MaxSpeed;
-        Stats[4].text = "Boost Multiplier: " + playerConRef.BoostMultiplier;
-        Stats[5].text = "Shot Cooldown: " + playerConRef.ShotCooldown;
-        Stats[6].text = "Turn Speed: " + playerConRef.TurnSpeed;
+        Stats[3].text = "Max Speed: " + playerConRef.GetComponent<SpeedMod>().MaxSpeed;
+        Stats[4].text = "Boost Multiplier: " + playerConRef.GetComponent<SpeedMod>().SpeedMultiplier;
+        Stats[5].text = "Turn Speed: " + playerConRef.TurnSpeed;
 
         Cargo[0].text = "Misc Loot: " + playerConRef.CargoHold;
         Cargo[1].text = "Space Credits: " + playerConRef.Money;

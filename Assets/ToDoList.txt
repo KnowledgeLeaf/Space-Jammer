@@ -1,36 +1,66 @@
-~Enemies
+**~Enemies**
 {
     Shooting
     Looking at/Chasing player
     Enemy shooting sounds
     Different types of Enemies
+    Enemies do not like stations
 }
 
 ~Player Mechanics
 {
-	!!Change ship to have module child objects (Modules will change scripts and sprites depending on the upgrade ship has)!!
-	{
-		Shield
-		Hull
-		Weapons
-		Pickup
-        Thrusters
-	}
-	
-    Thruster speed boost time limit w/indicator
+	Inventory of (so far random) materials acquired from space junk
+    {
+        A scrolling inventory showing all types of materials you have in your inventory, with options to jettison each
+    }
+    **Thruster speed boost time limit w/indicator**
     Skill levels/trees?
 }
-~Environment
+**~Environment**
 {
     !!Expansive universe(possibly procedural generating if desired)!!
     {
         Have randomly spawning stations
         !!Probably start using pooling for various obstacles and stations to ensure performance!!
+        {
+            If lifestate goes to 0, or object gets too far away, instead of destroying, set active false, and send a call to the pooling manager to add it the list of objects inactive
+            Inactive objects are allowed to be moved and set active again just outside the players visible range
+        }
     }
+	Station Rework
+	{
+        Setup stations to intialize with loot tables and mission tables + however many times the player has completed/acquired them overall
+        Tell Spawner to send information about new spawned stations to PoolingManager
+
+		Stations have multiple tabs for missions, exchanging materials, and exchanging ship parts
+        {
+            Missions
+            {
+                Collect certain materials
+                Kill certain enemies
+                Travel to certain areas (Probably a randomized distance away, or to other stations for now)
+            }
+            Exchange Materials
+            {
+                Shop shows how much the station and the player has
+                Buy and sell minerals that have somewhat randomized per station prices, but prices change depending on how much the station has
+                Materials get used up at random rates
+                Sell All button w/confirmation
+            }
+            **Exchange Ship Parts**
+            {
+                Able to purchase parts from the station that get equipped immediately to your ship
+                Randomized per station equipments
+                Also a repair button
+            }
+        }
+
+        Save station data for when stations have to despawn for performance
+	}
 }
 ~Audio
 {
-    Sound FX on player block
+    **Sound FX on player block**
 }
 ~Module ideas
 {
@@ -45,11 +75,6 @@
         Weapon module
         Close range high damage continuous stream, shields are down when used
     }
-    !!"Launcher"!!
-    {
-        Weapon module
-        Standard medium range projectile (Basically what's already in the game)
-    }
     "Plasma Rail"
     {
         Weapon module
@@ -60,35 +85,32 @@
         Pickup module
         Grabs one item at a time (but maybe really fast)
     }
-    !!"Grav pull"!!
+    "Hull Plating M/H"
     {
-        Pickup module
-        Sucks in all items in a large radius, but slowly (basically what's already in the game)
-    }
-    "Hull Plating L/M/H"
-    {
-        Hull module
         Hull Plating that increases health and decreases speed based on being Light, Medium, or Heavy
     }
     "Cutter Shield"
     {
         Shield that takes significantly less damage depending on how well aligned your edge is to the source of damage
     }
-    !!"Mobility Shield"!!
+    **!!"Mobility Shield"!!**
     {
-        Strong shield that charges and is active via turning, disables weapons and thrusters while active
+        !!Add Animated Sprite to shield!!
+    }
+    **"Boost Thrusters" (What's in game)**
+    {
+        Forward and backwards movement with turning
+        Relatively fast
+        Speed boost on LShift
     }
 }
 ~Misc
 {
-    Credits
+    **Credits**
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
-    Off Screen Navigation
-    Map
-    Main Menu
-    Gameover menus
-    Multiplayer
+    **Off Screen Navigation**
+    **Gameover menus**
 }
 ~Bug Fix Board
 {

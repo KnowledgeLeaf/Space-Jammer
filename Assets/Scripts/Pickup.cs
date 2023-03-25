@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
     void Start()
     {
         playerRef = GameObject.Find("Space Player");
+        Invoke("DestroyObject", 20);
     }
 
     // Update is called once per frame
@@ -24,5 +25,10 @@ public class Pickup : MonoBehaviour
             playerRef.GetComponent<PlayerController>().CargoHold += 1;
             Destroy(gameObject);
         }
+    }
+
+    private void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

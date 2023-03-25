@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeState : MonoBehaviour
 {
     [SerializeField]private int m_health;
-    private int m_DefaultHealth = 1;
+    private int m_DefaultHealth = 2;
     private int m_playerHealthMod = 10;
     private int m_bossHealthMod = 30;
     [SerializeField] private GameObject m_loot;
@@ -14,7 +14,7 @@ public class LifeState : MonoBehaviour
     [SerializeField] private GameObject explosionSound;
     [SerializeField] private GameObject damageCanvas;
 
-    void Awake()
+    void Start()
     {
         if(tag == "Player")
         {
@@ -55,7 +55,7 @@ public class LifeState : MonoBehaviour
 
             if(gameObject.tag != "Player")
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             else
             {

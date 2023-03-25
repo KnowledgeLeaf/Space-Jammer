@@ -10,17 +10,6 @@ public class ShopManager : MonoBehaviour
     public Transform shopContent;
     public GameObject itemPrefab;
 
-    private void Awake()
-    {
-        //Singleton
-        if(instance == null){
-            instance = this;
-        }else{
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         foreach (Upgrade upgrade in upgrades)
@@ -57,7 +46,7 @@ public class ShopManager : MonoBehaviour
     {
         switch(upgrade.name)
         {
-            case "Speed":
+/*            case "Speed":
                 playerConRef.MaxSpeed += 1;
                 playerConRef.AccelerationRate += 20f;
                 break;
@@ -67,7 +56,7 @@ public class ShopManager : MonoBehaviour
             case "Health":
                 playerLife.Health += 1;
                 playerLife.PlayerHealthMod += 1;
-                break;
+                break;*/
             default:
                 Debug.Log("Could Not Upgrade");
                 break;
