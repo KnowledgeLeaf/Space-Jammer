@@ -6,8 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource m_musicAudioSource;
     [SerializeField] private AudioSource m_soundFXAudioSource;
-    private AudioClip m_Clip;
-    private List<AudioClip> m_AudioClipList;
+    [SerializeField] private AudioClip m_testClip;
 
     private void Start()
     {
@@ -34,6 +33,8 @@ public class AudioManager : MonoBehaviour
     public void SoundFXVolume(float value)
     {
         m_soundFXAudioSource.volume = value;
+        m_soundFXAudioSource.clip = m_testClip;
+        m_soundFXAudioSource.Play();
     }
     public void SoundFXPlay(AudioClip clip)
     {

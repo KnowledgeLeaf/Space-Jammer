@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeState : MonoBehaviour
 {
     [SerializeField]private int m_health;
-    private int m_DefaultHealth = 2;
+    private int m_DefaultHealth = 1;
     private int m_playerHealthMod = 10;
     private int m_bossHealthMod = 30;
     [SerializeField] private GameObject m_loot;
@@ -23,6 +23,10 @@ public class LifeState : MonoBehaviour
         else if(tag == "Boss")
         {
             m_health = m_DefaultHealth * m_bossHealthMod;
+        }
+        else if (tag == "Destructable")
+        {
+            m_health = m_DefaultHealth * 2;
         }
         else
         {

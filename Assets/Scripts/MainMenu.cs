@@ -38,19 +38,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Can't Quit In The Editor Silly");
         Application.Quit();
     }
-
-    public void StartGame()
-    {
-        Time.timeScale = 1.0f;
-
-        foreach (GameObject go in thingsToToggle)
-        {
-            go.SetActive(true);
-        }
-
-        gameObject.SetActive(false);
-    }
-
     public void ToggleMainMenu()
     {
         if (!gameObject.activeSelf)
@@ -66,7 +53,12 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
+            foreach (GameObject go in thingsToToggle)
+            {
+                go.SetActive(true);
+            }
             gameObject.SetActive(false);
+            Time.timeScale = 1.0f;
         }
     }
 }

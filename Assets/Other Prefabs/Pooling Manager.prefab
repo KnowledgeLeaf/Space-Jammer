@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2989672161035528050}
   - component: {fileID: 871451670911359468}
+  - component: {fileID: 1395520899082133219}
   m_Layer: 0
   m_Name: Pooling Manager
   m_TagString: Untagged
@@ -44,6 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc0c7a641e6aa3408a2a9a56245b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destructiblesPool: []
-  m_enemyPool: []
-  m_stationPool: []
+  _stationPrefab: {fileID: 0}
+--- !u!114 &1395520899082133219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641635427642842286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6276889290c51048861c2ffd3608c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 5782616673736723125, guid: dffa36f254c9e7f4d9caa07618fd456a, type: 3}
+  - {fileID: 3976403854872328930, guid: 142636823fa47b948aae888f6209d2c6, type: 3}
+  stations:
+  - {fileID: 6996031853984493920, guid: f9ce0757ef423164999e3d62eb8545bf, type: 3}
+  shopUIRef: {fileID: 0}
+  playerRef: {fileID: 0}

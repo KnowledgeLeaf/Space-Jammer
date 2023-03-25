@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         poolingManager = GetComponent<PoolingManager>();
+        playerRef = GameObject.FindGameObjectWithTag("Player");
         SpawnDestructible(22);
         SpawnStation(4);
     }
