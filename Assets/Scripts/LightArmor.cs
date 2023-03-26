@@ -6,9 +6,10 @@ public class LightArmor : MonoBehaviour
 {
     private LifeState life;
     private SpeedMod speed;
+    public string m_name = "Light Armor";
 
     private int m_lifeMod = 5;
-    private int m_speedMod = 2;
+    private int m_speedMod = 6;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,8 @@ public class LightArmor : MonoBehaviour
         life = transform.root.GetComponent<LifeState>();
         speed = transform.root.GetComponent<SpeedMod>();
 
-        life.PlayerHealthMod = life.PlayerHealthMod - m_lifeMod;
-        speed.Speed = speed.Speed * m_speedMod;
+        life.PlayerHealthMod = m_lifeMod;
+        life.Health = life.PlayerHealthMod;
+        speed.Speed = m_speedMod;
     }
 }

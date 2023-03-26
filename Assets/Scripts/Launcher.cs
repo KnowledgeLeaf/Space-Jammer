@@ -7,6 +7,7 @@ public class Launcher : MonoBehaviour
     [SerializeField] private GameObject booletPrefab;
     private float m_shotTimer;
     private float m_shotCooldown = 0.3f;
+    public string m_name = "Launcher";
 
     // Update is called once per frame
     void Update()

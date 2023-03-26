@@ -5,6 +5,7 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
     private int m_magnetSpeed = 2;
+    public string m_name = "Magnet";
 
     private void OnTriggerStay2D(Collider2D other)
     {

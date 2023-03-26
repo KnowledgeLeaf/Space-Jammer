@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2738010344173222684}
   m_Layer: 0
   m_Name: Light Armor
-  m_TagString: Untagged
+  m_TagString: HullModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,6 +11,12 @@ TagManager:
   - Manager
   - Boss
   - ShopUI
+  - Inventory
+  - WeaponModule
+  - PickupModule
+  - ShieldModule
+  - HullModule
+  - ThrusterModule
   layers:
   - Default
   - TransparentFX
