@@ -10,13 +10,8 @@ public class BossScript : MonoBehaviour
     [SerializeField] private AudioClip backgroundMusic;
     [SerializeField] private bool m_inBossRadius;
     [SerializeField] private GameObject projectilePreFab;
-    [SerializeField] private float m_shootCooldown = 0;
+    [SerializeField] private float m_shootCooldown = 3;
     private Vector3 pos;
-
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -42,7 +37,7 @@ public class BossScript : MonoBehaviour
     {
         for(int i = value; i > 0; i--)
         {
-            pos = new Vector3 (Random.Range(-1.0f, 1.0f), transform.position.y, transform.position.z);
+            pos = transform.position;
             Instantiate(projectilePreFab, pos, transform.rotation);
         }
         m_shootCooldown = 5;

@@ -10,6 +10,7 @@ public class MobilityShield : MonoBehaviour
     private float m_shieldMax = 8;
     [SerializeField] private AudioClip m_shieldSound;
     private AudioManager theAudioManager;
+    public string m_name = "Mobility Shield";
 
     private void Start()
     {

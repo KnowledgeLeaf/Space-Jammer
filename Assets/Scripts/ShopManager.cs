@@ -1,52 +1,74 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static ShopManager;
 
 public class ShopManager : MonoBehaviour
 {
     public static ShopManager instance;
-    public Upgrade[] upgrades;
+/*    public Upgrade[] upgrades;*/
     [SerializeField] PlayerController playerConRef;
     [SerializeField] LifeState playerLife;
     public Transform shopContent;
-    public GameObject itemPrefab;
+    public List<GameObject> itemPrefab;
+    public GameObject shopitemPrefab;
 
     private void Start()
     {
-        foreach (Upgrade upgrade in upgrades)
+        for (int i = 0; i < itemPrefab.Count; i++)
         {
-            GameObject item = Instantiate(itemPrefab, shopContent);
-            upgrade.itemRef = item;
+            GameObject item = Instantiate(shopitemPrefab, shopContent);
+            item.GetComponent<GiveModule>().ChangeModule = itemPrefab[i];
 
             foreach (Transform child in item.transform)
             {
-                if (child.gameObject.name == "Price") {
-                    child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "$" + upgrade.cost.ToString();
-                } else if (child.gameObject.name == "Name") {
-                    child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = upgrade.name;
-                }   else if (child.gameObject.name == "Image") {
-                    child.gameObject.GetComponent<Image>().sprite = upgrade.image;
+                if (child.gameObject.name == "Price")
+                {
+                    child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "$" + (100f).ToString();
+                }
+                else if (child.gameObject.name == "Name")
+                {
+                    child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = itemPrefab[i].name;
                 }
             }
-
-            item.GetComponent<Button>().onClick.AddListener(() => BuyUpgrade(upgrade));
         }
     }
+}
 
-    public void BuyUpgrade(Upgrade upgrade)
+/*   foreach (Upgrade upgrade in upgrades)
     {
-        if (playerConRef.Money >= upgrade.cost)
-        {
-            playerConRef.Money -= upgrade.cost;
+        GameObject item = Instantiate(itemPrefab, shopContent);
+        upgrade.itemRef = item;
 
-            ApplyUpgrade(upgrade);
+        foreach (Transform child in item.transform)
+        {
+            if (child.gameObject.name == "Price") {
+                child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "$" + upgrade.cost.ToString();
+            } else if (child.gameObject.name == "Name") {
+                child.gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = upgrade.name;
+            }   else if (child.gameObject.name == "Image") {
+                child.gameObject.GetComponent<Image>().sprite = upgrade.image;
+            }
         }
-    }
 
-    public void ApplyUpgrade(Upgrade upgrade)
-    {
-        switch(upgrade.name)
-        {
-/*            case "Speed":
+        item.GetComponent<Button>().onClick.AddListener(() => BuyUpgrade(upgrade));
+    }*/
+
+/*   public void BuyUpgrade(Upgrade upgrade)
+   {
+       if (playerConRef.Money >= upgrade.cost)
+       {
+           playerConRef.Money -= upgrade.cost;
+
+           ApplyUpgrade(upgrade);
+       }
+   }
+
+   public void ApplyUpgrade(Upgrade upgrade)
+   {
+       switch(upgrade.name)
+       {
+*//*            case "Speed":
                 playerConRef.MaxSpeed += 1;
                 playerConRef.AccelerationRate += 20f;
                 break;
@@ -57,14 +79,14 @@ public class ShopManager : MonoBehaviour
                 playerLife.Health += 1;
                 playerLife.PlayerHealthMod += 1;
                 break;*/
-            default:
+/*default:
                 Debug.Log("Could Not Upgrade");
-                break;
+break;
             
         }
     }
 }
-
+*/
 [System.Serializable] public class Upgrade
 {
     public string name;

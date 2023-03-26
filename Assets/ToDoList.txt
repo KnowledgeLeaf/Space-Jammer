@@ -1,10 +1,7 @@
-**~Enemies**
+~Enemies
 {
-    Shooting
-    Looking at/Chasing player
     Enemy shooting sounds
     Different types of Enemies
-    Enemies do not like stations
 }
 
 ~Player Mechanics
@@ -16,17 +13,14 @@
     **Thruster speed boost time limit w/indicator**
     Skill levels/trees?
 }
-**~Environment**
+~Environment
 {
-    !!Expansive universe(possibly procedural generating if desired)!!
+    !!Probably start using pooling for various obstacles and stations to ensure performance!!
     {
-        Have randomly spawning stations
-        !!Probably start using pooling for various obstacles and stations to ensure performance!!
-        {
-            If lifestate goes to 0, or object gets too far away, instead of destroying, set active false, and send a call to the pooling manager to add it the list of objects inactive
-            Inactive objects are allowed to be moved and set active again just outside the players visible range
-        }
+        If lifestate goes to 0, or object gets too far away, instead of destroying, set active false, and send a call to the pooling manager to add it the list of objects inactive
+        Inactive objects are allowed to be moved and set active again just outside the players visible range
     }
+
 	Station Rework
 	{
         Setup stations to intialize with loot tables and mission tables + however many times the player has completed/acquired them overall
@@ -47,9 +41,9 @@
                 Materials get used up at random rates
                 Sell All button w/confirmation
             }
-            **Exchange Ship Parts**
+            Exchange Ship Parts
             {
-                Able to purchase parts from the station that get equipped immediately to your ship
+                Keep track of level of item purchased, next purchase of said weapon makes it stronger
                 Randomized per station equipments
                 Also a repair button
             }
@@ -76,7 +70,7 @@
         Weapon module
         Long range, High damage, Low fire rate (Maybe an electrical varient that does more damage to shields than to health)
     }
-    "Robo Arm"
+    "Tractor Beam"
     {
         Pickup module
         Grabs one item at a time (but maybe really fast)
@@ -89,11 +83,11 @@
     {
         Shield that takes significantly less damage depending on how well aligned your edge is to the source of damage
     }
-    **!!"Mobility Shield"!!**
+    !!"Mobility Shield"!!
     {
         !!Add Animated Sprite to shield!!
     }
-    **"Boost Thrusters" (What's in game)**
+    !!"Boost Thrusters" (What's in game)!!
     {
         Forward and backwards movement with turning
         Relatively fast
@@ -102,16 +96,20 @@
 }
 ~Misc
 {
-    **Credits**
+    Credits
     Saving (Saves player position, currency, upgrades, etc)
     Headsup display w/message boxes
-    **Off Screen Navigation**
-    **Main Menu**
-    **Gameover menus**
+    Off Screen Navigation
+    Gameover menus
 }
 ~Bug Fix Board
 {
-    
+    Sounds to put on AudioManager(Probably audiomanager Creating a gameobject with AudioSource that cleans itself up later), instead of on self:
+    Also be sure to add a cap to the sounds, or something, so we don't blow ears out from having 10 explosion sounds playing at the same time, while realistic, not fun.
+    {
+        Projectile
+        Explosion
+    }
 }
 
 **Necessary things for next itteration Labeled with "**"

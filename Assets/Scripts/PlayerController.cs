@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject hullModule;
     [SerializeField] private GameObject thrusterModule;
     private SpeedMod speedStats;
+    public bool inStationRadius = true;
 
     void Awake()
     {
@@ -82,6 +83,19 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.C))
         {
             m_rigidbody.AddForce(-m_rigidbody.velocity / (m_acceleration * 2));
+        }
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            Money += 100000;
+        }
+        if(Input.GetKeyDown(KeyCode.N))
+        {
+            GetComponent<LifeState>().Health = 100000;
+        }
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            GetComponent<LifeState>().Health = 1;
+            GetComponent<LifeState>().TakeDamage(1);
         }
     }
     void FixedUpdate() 

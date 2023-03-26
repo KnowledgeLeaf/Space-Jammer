@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5087038840568942223}
   m_Layer: 0
   m_Name: Launcher
-  m_TagString: Untagged
+  m_TagString: WeaponModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4be404372e2e444b613bbb55b23dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  booletPrefab: {fileID: 7251362140891662001, guid: ad24c43a6447ff144883778691043f05, type: 3}
+  m_name: Launcher
